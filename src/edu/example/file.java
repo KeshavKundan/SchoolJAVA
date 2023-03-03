@@ -1,7 +1,8 @@
+package edu.example;
 /* Write a program to read and write a set of in a file. */
 import java.io.*;
 import java.util.*;
-class file {file
+class file {
     public void fileTest() throws IOException {
         FileWriter fout=new FileWriter("invent.txt");
         BufferedWriter bout=new BufferedWriter(fout);
@@ -28,12 +29,16 @@ class file {file
         BufferedReader br=new BufferedReader(fr);
         String s;
         while ((s=br.readLine())!=null) {
-            Scanner sc=new Scanner(s);
-            System.out.print(sc.next()+"\t"+sc.next()+"\t");
-            int k=Integer.parseInt(sc.next());
-            int r=Integer.parseInt(sc.next());
-            int amt=k*r;
-            System.out.println(k+"\t"+r+"\t"+amt);
+            try (Scanner sc = new Scanner(s)) {
+                System.out.print(sc.next()+"\t"+sc.next()+"\t");
+                int k=Integer.parseInt(sc.next());
+                int r=Integer.parseInt(sc.next());
+                int amt=k*r;
+                System.out.println(k+"\t"+r+"\t"+amt);
+            } catch (NumberFormatException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         br.close();
         fr.close();

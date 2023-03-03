@@ -1,3 +1,4 @@
+package edu.example;
 /* Write a program to accept ten numbers. Calculate and display sum of odd no and even no, total, average. */
 import java.io.*;
 public class evenOddSum {

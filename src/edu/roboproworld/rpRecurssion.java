@@ -1,4 +1,6 @@
-public class recurssion {
+package edu.roboproworld;
+
+public class rpRecurssion {
     public int power(int a, int b) {
         if (b == 0) {
             return 1;
