@@ -55,30 +55,4 @@ public class rpSort {
 		for (int i = 0, j = l; i < merged.length; i++, j++)
 			arr[j] = merged[i];
 	}
-
-	public int[] primeNum(int arr[]) {
-		int P[] = new int[arr.length], i = 0, j = 0, c;
-		for (; i < 10; i++) {
-			c = 0;
-			for (int f = 2; f < arr[i]; f++)
-				if (arr[i] % f == 0)
-					c++;
-			if (!(c > 0))
-				P[j++] = arr[i];
-		}
-		return P;
-	}
-
-	public int[] compositeNum(int arr[]) {
-		int C[] = new int[arr.length], i = 0, k = 0, c;
-		for (; i < 10; i++) {
-			c = 0;
-			for (int f = 2; f < arr[i]; f++)
-				if (arr[i] % f == 0)
-					c++;
-			if (c > 0)
-				C[k++] = arr[i];
-		}
-		return C;
-	}
 }
