@@ -35,9 +35,6 @@ class file {
                 int r=Integer.parseInt(sc.next());
                 int amt=k*r;
                 System.out.println(k+"\t"+r+"\t"+amt);
-            } catch (NumberFormatException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
             }
         }
         br.close();
