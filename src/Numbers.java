@@ -9,6 +9,14 @@ public class Numbers {
         return (num % 2 != 0) ? false : true;
     }
 
+    public int isPrime(int P) {
+        int c = 0;
+        for (int i = 2; i < P - 1; i++)
+            if (P / i == 0)
+                c++;
+        return (c == 0) ? 1 : 0;
+    }
+
     public Boolean isHappy(int num) {
         int temp = num, sum = 0;
         while (temp != 1 && temp != 4) {
@@ -43,6 +51,21 @@ public class Numbers {
             temp /= 10;
         }
         return (num == sum) ? true : false;
+    }
+
+    public int isAdam(int P) {
+        int temp = P, rev = 0;
+        while (temp > 0) {
+            rev = (rev * 10) + (temp % 10);
+            temp /= 10;
+        }
+        temp = rev * rev;
+        rev = 0;
+        while (temp > 0) {
+            rev = (rev * 10) + (temp % 10);
+            temp /= 10;
+        }
+        return ((P * P) == rev) ? 1 : 0;
     }
 
     public int romanToNum(String s) {
