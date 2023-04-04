@@ -1,8 +1,8 @@
-package edu.example;
+
 /* Write a program to read and write a set of in a file. */
 import java.io.*;
 import java.util.*;
-class file {
+class FileHandlingBasic {
     public void fileTest() throws IOException {
         FileWriter fout=new FileWriter("invent.txt");
         BufferedWriter bout=new BufferedWriter(fout);

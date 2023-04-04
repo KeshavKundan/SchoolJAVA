@@ -1,5 +1,3 @@
-package edu.example;
-
 // wap to input 25 alphabets and store in alphaay alpha[].
 // alphaange all letters in alphabetical order using bubble sort.
 import java.util.Scanner;
